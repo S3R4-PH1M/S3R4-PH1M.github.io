@@ -1,0 +1,104 @@
+* {
+    font-family: Helvetica;
+    background-color: #000000;
+}
+
+div.container {
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 57px;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Header Section */
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 171px;
+}
+
+header h1 {
+    flex-basis: 500px;
+
+}
+
+.nav-container {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-project {
+    flex-basis: 100px;
+    border-radius: 10px;
+    min-width: 150px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 57px;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+.nav-about {
+    flex-basis: 100px;
+    border-radius: 10px;
+    min-width: 150px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 57px;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+.nav-contact {
+    flex-basis: 100px;
+    border-radius: 10px;
+    min-width: 150px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 57px;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: black
+}
+
+.nav:hover {
+    background-color: #B8B8B8;
+}
+
+.nav:active {
+    background-color: #969696;
+}
+
+
+/* Project Section */
