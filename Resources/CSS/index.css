@@ -5,7 +5,6 @@
 
 div.container {
     border: 1px solid #D6D6D6;
-    border-radius: 10px;
     margin: 5px;
     padding: 5px;
 }
@@ -101,81 +100,81 @@ header h1 {
 }
 
 
-/* Project Section */
+/* Project Accordion */
 
 
 .project-container {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap; 
     justify-content: center;
     text-align: center;
     margin: 20px auto;
     min-height: 100px;
     padding: 0px 10px;
-    gap: 5px;
 }
 
 .project-1 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 .project-2 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;    
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 .project-3 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 .project-4 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 .project-5 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 .project-6 {
     background-color: #D6D6D6;
-    flex-basis: 525px;
-    max-width: 525px;
+    flex-basis: 100%;
     flex-grow: 1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #000000;
 }
 
 img {
+    display: none;
     background-color: #B8B8B8;
     max-width: 100%;
     border-radius: 10px;
@@ -183,14 +182,16 @@ img {
 
 .project-title {
     text-align: left;
-    margin: 0px 5px;
-    padding: 5px 5px;
-    font-size: 18px;
+    font-size: 32px;
+    margin-left: 10px;
+    font-family: "Bebas Neue";
+    color: #c3e28d;
 }
 
 .project-blurb {
     text-align: left;
-    margin: 0px 5px;
-    padding: 5px 5px;
-    font-size: 14px;
+    font-size: 32px;
+    margin-left: 10px;
+    font-family: "Bebas Neue";
+    color: #c3e28d;
 }
