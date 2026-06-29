@@ -1,7 +1,10 @@
+/* General Styles */
+
 * {
     font-family: Helvetica;
 
 }
+
 html {
     background-color: #000000;
     scroll-behavior: smooth;
@@ -12,8 +15,6 @@ html {
 body {
     display: block;
 }
-
-
 
 h1 {
     font-weight: bold;
@@ -30,7 +31,6 @@ h2 {
 }
 
 /* Header Section */
-
 
 header {
     display: inline-flex;
@@ -119,8 +119,6 @@ header h1 {
     z-index: 3;
 }
 
-
-
 .nav-button {
     text-decoration: none;
     color: black
@@ -135,6 +133,7 @@ header h1 {
 }
 
 /* Hero Section */
+
 .hero-container {
     scroll-snap-align: start;
     height: 100vh;
@@ -156,9 +155,7 @@ header h1 {
     color: #c3e28d;
 }
 
-
 /* Project Accordion */
-
 
 .accordion {
     color: #c3e28d;
@@ -244,6 +241,7 @@ h3 {
 }
 
 /* Mobile Styles */
+
 @media screen and (max-width: 550px) {
     .nav-project {
         display: none;
@@ -252,8 +250,6 @@ h3 {
     .hero-button {
         display: none;
     }
-
-*/
 }
 
 @media screen and (max-width: 400px) {
@@ -282,22 +278,16 @@ h3 {
         padding: 0.1rem;
         margin-right: 0.3125rem;
     }
-
-*/
 }
 
 @media screen and (min-width: 400px) {
     .mobile-nav-container {
         display: none;
     }
-
-*/
 }
 
 @media screen and (max-height: 610px) {
     .hero {
         height: 70%;
     }
-
-*/
 }
