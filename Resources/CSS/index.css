@@ -17,7 +17,7 @@ body {
 
 h1 {
     font-weight: bold;
-    font-size:clamp(2.25rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
     margin-left: 0.3125rem;
     transform: scaleY(2);
     font-family: "Bebas Neue";
@@ -37,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 10.6875rem;
+    height: 9rem;
     /*backdrop-filter: blur(16px);*/
 }
 
@@ -64,7 +64,7 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.25rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
@@ -80,7 +80,7 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.25rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
@@ -96,11 +96,30 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.25rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
 }
+
+.icon {
+    display: none;
+    color: #c3e28d;
+    font-size: 2.8125rem;
+    padding-right: 0.3125rem;
+}
+
+.mobile-nav-container {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    z-index: 3;
+}
+
+
 
 .nav-button {
     text-decoration: none;
@@ -225,8 +244,50 @@ h3 {
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .nav-project {
+        display: none;
+    }
+    
+    .hero-button {
+        display: none;
+    }
+
+*/
+}
+
+@media screen and (max-width: 400px) {
+    .nav-project {
+        display: none;
+    }
+
+    .nav-about {
+        display: none;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .mobile-contact {
+        padding: 0.1rem;
+        margin-right: 0.3125rem;
+    }
+
+    .mobile-about {
+        padding: 0.1rem;
+        margin-right: 0.3125rem;
+    }
+
+*/
+}
+
+@media screen and (min-width: 400px) {
+    .mobile-nav-container {
         display: none;
     }
 

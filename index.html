@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Barcode+128&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rayne Townsend - Portfolio</title>
 </head>
 <body>
@@ -19,9 +20,15 @@
                     <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><p class="nav-project nav">Projects</p></a>
                     <a class="nav-button" href="./about.html"><p class="nav-about nav">About</p></a>
                     <a class="nav-button" href="./contact.html"><p class="nav-contact nav">Contact</p></a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="mobile-nav-container" id="mobileNav">
+                    <a class="nav-button" href="./about.html"><p class="mobile-about">About</p></a>
+                    <a class="nav-button" href="./contact.html"><p class="mobile-contact">Contact</p></a>
                 </div>
             </header>
-
 
 
             <div class="hero">
@@ -134,7 +141,14 @@ for (i = 0; i < accordions.length; i++) {
   });
 }
 
-
+function myFunction() {
+  var x = document.getElementById("mobileNav");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+} 
 </script>
 
 </body>
