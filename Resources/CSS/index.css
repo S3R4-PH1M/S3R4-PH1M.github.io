@@ -18,7 +18,7 @@ body {
 
 h1 {
     font-weight: bold;
-    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
     margin-left: 0.3125rem;
     transform: scaleY(2);
     font-family: "Bebas Neue";
@@ -64,7 +64,7 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
@@ -80,7 +80,7 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
@@ -96,7 +96,7 @@ header h1 {
     padding-right: 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.3rem, 5.5vw, 3.5625rem);
+    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
@@ -206,27 +206,27 @@ img {
 
 p {
     color: #c3e28d;
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
     text-align: left;
     font-family: "Bebas Neue";
 }
 
 h3 {
     color: #c3e28d;
-    font-size: 2.8125rem;
+    font-size: clamp(1.95rem, 5.5vw, 3rem);
     text-align: left;
     font-family: "Bebas Neue";
 }
 
 .index {
     color: #c3e28d;
-    font-size: 2rem;
+    font-size: clamp(1.95rem, 5vw, 3rem);
     text-align: left;
     font-family: "Bebas Neue";
 }
 
 .project-info {
-    width: 30%
+    width: 31.25rem;
 }
 
 .carousel {
@@ -242,6 +242,31 @@ h3 {
 
 /* Mobile Styles */
 
+@media screen and (max-width: 800px) {
+
+   .project-info {
+        width: 60%
+    }
+
+    header {
+        height: 7rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .accordion {
+        padding: 0.5rem;
+        height: 12.625rem;
+        display: flex;
+        text-align: left;
+        outline: none;
+        font-size: 2rem;
+        transition: 0.8s;
+        background-color: #000000;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .nav-project {
         display: none;
@@ -249,6 +274,17 @@ h3 {
     
     .hero-button {
         display: none;
+    }
+
+    .accordion {
+        padding: 0.5rem;
+        height: 12.625rem;
+        display: flex;
+        text-align: left;
+        outline: none;
+        font-size: 2rem;
+        transition: 0.8s;
+        background-color: #000000;
     }
 }
 
@@ -278,6 +314,31 @@ h3 {
         padding: 0.1rem;
         margin-right: 0.3125rem;
     }
+
+    .accordion {
+        padding: 0.5rem;
+        height: 10.625rem;
+        display: flex;
+        text-align: left;
+        outline: none;
+        font-size: 2rem;
+        transition: 0.8s;
+        background-color: #000000;
+    }
+
+    .project-info {
+        width: 60%;
+    }
+
+    p {
+        padding-top: 1px;
+        margin-top: 8px;
+    }
+
+    h3 {
+        padding-bottom: 1px;
+        margin-bottom: 8px;
+    }
 }
 
 @media screen and (min-width: 400px) {
@@ -287,7 +348,7 @@ h3 {
 }
 
 @media screen and (max-height: 610px) {
-    .hero {
-        height: 70%;
-    }
+
 }
+
+
