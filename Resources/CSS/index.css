@@ -54,49 +54,15 @@ header h1 {
     width: 100%;
 }
 
-.nav-project {
+.nav {
     flex-basis: 6.25rem;
     border-radius: 0.625rem;
     min-width: 5.375rem;
-    margin-left: 0.3125rem;
-    margin-right: 0.3125rem;
-    padding-left: 0.3125rem;
-    padding-right: 0.3125rem;
+    margin: 0.3125rem;
+    padding: 0 0.3125rem;
     text-align: center;
     font-weight: bold;
-    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
-}
-
-.nav-about {
-    flex-basis: 6.25rem;
-    border-radius: 0.625rem;
-    min-width: 5.375rem;
-    margin-left: 0.3125rem;
-    margin-right: 0.3125rem;
-    padding-left: 0.3125rem;
-    padding-right: 0.3125rem;
-    text-align: center;
-    font-weight: bold;
-    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
-}
-
-.nav-contact {
-    flex-basis: 6.25rem;
-    border-radius: 0.625rem;
-    min-width: 5.375rem;
-    margin-left: 0.3125rem;
-    margin-right: 0.3125rem;
-    padding-left: 0.3125rem;
-    padding-right: 0.3125rem;
-    text-align: center;
-    font-weight: bold;
-    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
+    font-size: clamp(2.6rem, 5.5vw, 3.5625rem);
     transform: scaleY(2);
     font-family: "Bebas Neue";
     color: #c3e28d;
