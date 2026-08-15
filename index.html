@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="./Resources/CSS/index.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
+    <link href="./Resources/CSS/index.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,18 +18,20 @@
         <div class="hero-container">
             <header>
                 <h1>RAYNE</h1>
-                <div class="nav-container">
-                    <a class="nav-button" href="./about.html"><p class="nav-about nav">About</p></a>
-                    <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><p class="nav-project nav">Projects</p></a>
-                    <a class="nav-button" href="./contact.html"><p class="nav-contact nav">Contact</p></a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-                <div class="mobile-nav-container" id="mobileNav">
-                    <a class="nav-button" href="./about.html"><p class="mobile-about">About</p></a>
-                    <a class="nav-button" href="./contact.html"><p class="mobile-contact">Contact</p></a>
-                </div>
+                <nav aria-label="Main navigation">
+                    <div class="nav-container">
+                        <a class="nav-button" href="./about.html"><span class="nav-about nav">About</span></a>
+                        <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="nav-project nav">Projects</span></a>
+                        <a class="nav-button" href="./contact.html"><span class="nav-contact nav">Contact</span></a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-nav-container" id="mobileNav">
+                        <a class="nav-button" href="./about.html"><span class="mobile-about">About</span></a>
+                        <a class="nav-button" href="./contact.html"><span class="mobile-contact">Contact</span></a>
+                    </div>
+                </nav>
             </header>
 
             <div class="hero">
@@ -37,7 +39,7 @@
                     <p class="hero-text">Hi, I'm Rayne Townsend, a front-end web developer and designer. I create responsive websites that are visually appealing, user-friendly, and optimized for performance.</p>
                     <img class="hero-profile-photo" src="./Resources/Images/Dithered Profile.png" alt="Profile Image">
                 </div>    
-            <a class="hero-button" href="./contact.html"><p class="hero-button-text">Contact Me</p></a>
+            <a class="hero-button" href="./contact.html"><span class="hero-button-text">Contact Me</span></a>
             <p>-- <span class="barcode">RAYNETOWNSEND</span> --</p>
             </div>
         </div>
