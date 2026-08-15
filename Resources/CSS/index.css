@@ -148,6 +148,30 @@ header h1 {
     align-items: center;
 }
 
+.hero-profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.hero-profile-photo {
+    width: 31rem;
+    height: 36rem;
+    margin-top: 0.225rem;
+    margin-right: 0.525rem;
+    border-radius: 0.625rem;
+    object-fit: cover;
+}
+
+.hero-text {
+    color: #c3e28d;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    text-align: center;
+    font-family: "Bebas Neue";
+}
+
 .barcode {
     font-family: "Libre Barcode 128";
     font-size: 3.5625rem;
@@ -238,6 +262,17 @@ h3 {
     z-index: 1;
     background-color: #000000;
     scroll-snap-align: start;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    color: #c3e28d;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
 }
 
 /* Mobile Styles */
