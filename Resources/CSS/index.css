@@ -157,8 +157,8 @@ header h1 {
 }
 
 .hero-profile-photo {
-    width: 31rem;
-    height: 36rem;
+    width: min(31rem, 80vw);
+    height: auto;
     margin-top: 0.225rem;
     margin-right: 0.525rem;
     border-radius: 0.625rem;
@@ -192,7 +192,6 @@ header h1 {
     align-items: center;
     border: none;
     text-align: left;
-    outline: none;
     font-size: 2rem;
     font-family: "Bebas Neue";
     transition: 0.8s;
@@ -295,15 +294,14 @@ h3 {
         height: 12.625rem;
         display: flex;
         text-align: left;
-        outline: none;
         font-size: 2rem;
         transition: 0.8s;
         background-color: #000000;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .nav-project {
+@media screen and (max-width: 768px) {
+    .nav-about {
         display: none;
     }
     
@@ -316,7 +314,6 @@ h3 {
         height: 12.625rem;
         display: flex;
         text-align: left;
-        outline: none;
         font-size: 2rem;
         transition: 0.8s;
         background-color: #000000;
@@ -355,7 +352,6 @@ h3 {
         height: 10.625rem;
         display: flex;
         text-align: left;
-        outline: none;
         font-size: 2rem;
         transition: 0.8s;
         background-color: #000000;
