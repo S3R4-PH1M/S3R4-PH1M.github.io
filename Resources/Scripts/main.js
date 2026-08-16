@@ -13,20 +13,53 @@ for (i = 0; i < accordions.length; i++) {
   });
 }
 
-function myFunction() {
-  var x = document.getElementById("mobileNav");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
+var icon = document.getElementById("icon");
+var mobileNav = document.getElementById("mobileNav");
+
+function openMobileNav() {
+  mobileNav.classList.add("open");
+  mobileNav.style.maxHeight = "8rem";
+  icon.classList.add("change");
+  icon.setAttribute("aria-expanded", "true");
+  mobileNav.setAttribute("aria-hidden", "false");
+}
+
+function closeMobileNav() {
+  mobileNav.classList.remove("open");
+  mobileNav.style.maxHeight = null;
+  icon.classList.remove("change");
+  icon.setAttribute("aria-expanded", "false");
+  mobileNav.setAttribute("aria-hidden", "true");
+}
+
+function toggleMobileNav() {
+  var isOpen = mobileNav.classList.contains("open");
+  if (isOpen) {
+    closeMobileNav();
   } else {
-    x.style.display = "flex";
+    openMobileNav();
   }
 }
 
-function toggleHamburger(x) {
-  x.classList.toggle("change");
-} 
+icon.addEventListener("click", toggleMobileNav);
 
-document.getElementById("icon").addEventListener("click", function() {
-  myFunction();
-  toggleHamburger(this);
+// Close after choosing a link, so the menu doesn't stay open post-navigation
+mobileNav.querySelectorAll(".nav-button").forEach(function(link) {
+  link.addEventListener("click", closeMobileNav);
+});
+
+// Close on outside click
+document.addEventListener("click", function(event) {
+  var clickedInsideNav = mobileNav.contains(event.target) || icon.contains(event.target);
+  if (!clickedInsideNav && mobileNav.classList.contains("open")) {
+    closeMobileNav();
+  }
+});
+
+// Close on Escape, return focus to the toggle
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && mobileNav.classList.contains("open")) {
+    closeMobileNav();
+    icon.focus();
+  }
 });
