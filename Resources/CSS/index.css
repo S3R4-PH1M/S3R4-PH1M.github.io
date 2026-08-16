@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styles */
 
 * {
     font-family: Helvetica;
@@ -26,8 +26,22 @@ h1 {
 }
 
 h2 {
-    font-weight: 500;
-    font-size: 1.125rem;
+    color: #c3e28d;
+    font-size: clamp(1.95rem, 5.5vw, 3rem);
+    transform: scaleY(1.325);
+    text-align: left;
+}
+
+h3 {
+    color: #c3e28d;
+    text-align: left;
+}
+
+p {
+    color: #c3e28d;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    transform: scaleY(1.125);
+    text-align: left;
 }
 
 /* Header Section */
@@ -39,6 +53,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #000000;
+    z-index: 2;
 }
 
 
@@ -84,6 +99,11 @@ nav{
   cursor: pointer;
 }
 
+.icon {
+    display: block;
+    padding-bottom: 1rem;
+}
+
 .bar1, .bar2, .bar3 {
     width: 38px;
     height: 7px;
@@ -113,15 +133,18 @@ nav{
     display: none;
     flex-direction: column;
     justify-content:space-between;
-    gap: 0.3125rem;
-    height: auto;
+    align-items: end;
+    gap: 1rem;
+    height: 8rem;
+    width: 8rem;;
     margin-top: 1.3125rem;
     margin-bottom: 1.3125rem;
+    padding: 0.5rem;
     background-color: #000000;
     position: absolute;
     top: 6rem;
     right: 0;
-    z-index: 3;
+    z-index: 1;
 }
 
 .nav-button {
@@ -130,6 +153,8 @@ nav{
     transform: scaleY(2);
     font-family: "Bebas Neue";
     font-weight: bold;
+    background-color: #000000;
+    padding-right: 0.3125rem;
 }
 
 .nav:hover {
@@ -174,10 +199,7 @@ nav{
 }
 
 .hero-text {
-    color: #c3e28d;
-    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
-    text-align: left;
-    font-family: "Bebas Neue";
+
 }
 
 .hero-button {
@@ -246,14 +268,14 @@ img {
     aspect-ratio: 1/1;
 }
 
-p {
+.panel p {
     color: #c3e28d;
     font-size: clamp(1.25rem, 4.5vw, 2.25rem);
     text-align: left;
     font-family: "Bebas Neue";
 }
 
-h2 {
+.projects-container h2 {
     color: #c3e28d;
     font-size: clamp(1.95rem, 5.5vw, 3rem);
     text-align: left;
@@ -369,10 +391,6 @@ h3 {
         display: none;
     }
 
-    .icon {
-        display: block;
-    }
-
     .mobile-contact {
         padding: 0.1rem;
         margin-right: 0.3125rem;
@@ -382,48 +400,17 @@ h3 {
         padding: 0.1rem;
         margin-right: 0.3125rem;
     }
-
-    .accordion {
-        padding: 0.5rem;
-        height: 12.625rem;
-        display: flex;
-        text-align: left;
-        font-size: 2rem;
-        transition: 0.8s;
-        background-color: #000000;
-    }
 }
 
 @media screen and (max-width: 400px) {
-
-    .accordion {
-        padding: 0.5rem;
-        height: 10.625rem;
-        display: flex;
-        text-align: left;
-        font-size: 2rem;
-        transition: 0.8s;
-        background-color: #000000;
-    }
 
     .project-info {
         width: 60%;
     }
 
-    p {
-        padding-top: 1px;
-        margin-top: 8px;
-    }
-
     h3 {
         padding-bottom: 1px;
         margin-bottom: 8px;
-    }
-}
-
-@media screen and (min-width: 400px) {
-    .mobile-nav-container {
-        display: none;
     }
 }
 
