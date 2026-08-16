@@ -20,4 +20,13 @@ function myFunction() {
   } else {
     x.style.display = "flex";
   }
+}
+
+function toggleHamburger(x) {
+  x.classList.toggle("change");
 } 
+
+document.getElementById("icon").addEventListener("click", function() {
+  myFunction();
+  toggleHamburger(this);
+});
