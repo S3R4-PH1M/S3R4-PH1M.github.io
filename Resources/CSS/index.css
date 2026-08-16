@@ -35,16 +35,17 @@ h2 {
 header {
     display: inline-flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-    height: 9rem;
-    /*backdrop-filter: blur(16px);*/
+    position: sticky;
+    top: 0;
+    background-color: #000000;
 }
 
 
 header h1 {
     flex-basis: 31.25rem;
     align-items: center;
+    overflow: hidden;
 }
 
 nav{
@@ -75,9 +76,8 @@ nav{
 }
 
 .icon {
-    display: none;
     color: #c3e28d;
-    font-size: 2.8125rem;
+    font-size: 3.8125rem;
     padding-right: 0.3125rem;
 }
 
@@ -107,13 +107,13 @@ nav{
 /* Hero Section */
 
 .hero-container {
-    scroll-snap-align: start;
-    height: 100vh;
+
+    height: 85vh;
 }
 
 .hero {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,25 +122,34 @@ nav{
 
 .hero-profile-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
 }
 
 .hero-profile-photo {
-    width: min(31rem, 80vw);
+    width: min(31rem, 90vw);
     height: auto;
     margin-top: 0.225rem;
     margin-right: 0.525rem;
-    border-radius: 0.625rem;
+    border-radius: 0.25rem;
     object-fit: cover;
 }
 
 .hero-text {
     color: #c3e28d;
     font-size: clamp(1.25rem, 4.5vw, 2.25rem);
-    text-align: center;
+    text-align: left;
+    font-family: "Bebas Neue";
+}
+
+.hero-button {
+    text-decoration: none;
+    color: #c3e28d;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    text-align: left;
+    font-weight: bold;
     font-family: "Bebas Neue";
 }
 
@@ -151,47 +160,49 @@ nav{
     color: #c3e28d;
 }
 
-/* Project Accordion */
+/* Project Carousel */
 
-.accordion {
-    color: #c3e28d;
-    cursor: pointer;
-    padding: 1.125rem;
+.projects-container {
     width: 100%;
-    height: 15.625rem;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.25rem;
+    scroll-snap-type: y mandatory;
+}
+
+.carousel-wrapper {
+    width: 99vw;
+    display: flex;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex: 0 0 auto;
+    gap: 1.25rem;
     align-items: center;
-    border: none;
-    text-align: left;
-    font-size: 2rem;
-    font-family: "Bebas Neue";
-    transition: 0.8s;
-    background-color: #000000;
+    padding: 1rem 0.25rem;
+    width: 95vw;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
-/* .active, .accordion:hover {
-} */
-
-.accordion:after {
-    content: '\002B';
-    color: #c3e28d;
-    font-family: "Bebas Neue";
-    font-weight: bold;
-    float: right;
-    margin-left: 0.3125rem;
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Edge */
 }
 
-.active:after {
-    content: "\2212";
-}
-
-.panel {
-    padding: 0 1.125rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1.2s ease-out;
+.carousel-item {
     display: flex;
+    flex-direction: column;
+    flex: 0 0 95vw;
+    height:100%;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    margin: 0.25rem;
+    border: 1px solid #c3e28d;
 }
 
 img {
@@ -202,6 +213,13 @@ img {
 p {
     color: #c3e28d;
     font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    text-align: left;
+    font-family: "Bebas Neue";
+}
+
+h2 {
+    color: #c3e28d;
+    font-size: clamp(1.95rem, 5.5vw, 3rem);
     text-align: left;
     font-family: "Bebas Neue";
 }
@@ -224,26 +242,40 @@ h3 {
     width: 31.25rem;
 }
 
-.carousel {
-    height:1000px;
-    width: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    z-index: 1;
-    background-color: #000000;
-    scroll-snap-align: start;
-}
-
 .skills {
     display: flex;
     justify-content: center;
+    overflow-x: auto;
     align-items: center;
     gap: 1.25rem;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     color: #c3e28d;
     font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+}
+
+.skills-banner {
+    overflow: hidden;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 0;
+    display: flex;
+}
+
+.banner-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Mobile Styles */
@@ -273,26 +305,11 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+    
     .nav-about {
         display: none;
     }
-    
-    .hero-button {
-        display: none;
-    }
 
-    .accordion {
-        padding: 0.5rem;
-        height: 12.625rem;
-        display: flex;
-        text-align: left;
-        font-size: 2rem;
-        transition: 0.8s;
-        background-color: #000000;
-    }
-}
-
-@media screen and (max-width: 400px) {
     .nav-project {
         display: none;
     }
@@ -318,6 +335,19 @@ h3 {
         padding: 0.1rem;
         margin-right: 0.3125rem;
     }
+
+    .accordion {
+        padding: 0.5rem;
+        height: 12.625rem;
+        display: flex;
+        text-align: left;
+        font-size: 2rem;
+        transition: 0.8s;
+        background-color: #000000;
+    }
+}
+
+@media screen and (max-width: 400px) {
 
     .accordion {
         padding: 0.5rem;
@@ -348,10 +378,6 @@ h3 {
     .mobile-nav-container {
         display: none;
     }
-}
-
-@media screen and (max-height: 610px) {
-
 }
 
 

@@ -13,144 +13,138 @@
 </head>
 <body>
 
-<!-- Hero Section -->
+<!-- Header Section -->
+
+    <header>
+        <h1>RAYNE</h1>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a class="nav-button" href="./about.html"><span class="nav-about nav">About</span></a>
+                <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="nav-project nav">Projects</span></a>
+                <a class="nav-button" href="./contact.html"><span class="nav-contact nav">Contact</span></a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="mobile-nav-container" id="mobileNav">
+                <a class="nav-button" href="./about.html"><span class="mobile-about">About</span></a>
+                <a class="nav-button" href="./contact.html"><span class="mobile-contact">Contact</span></a>
+            </div>
+        </nav>
+    </header>   
+
+    <main>
+
+        <!-- Hero Section -->
 
         <div class="hero-container">
-            <header>
-                <h1>RAYNE</h1>
-                <nav aria-label="Main navigation">
-                    <div class="nav-container">
-                        <a class="nav-button" href="./about.html"><span class="nav-about nav">About</span></a>
-                        <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="nav-project nav">Projects</span></a>
-                        <a class="nav-button" href="./contact.html"><span class="nav-contact nav">Contact</span></a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                    <div class="mobile-nav-container" id="mobileNav">
-                        <a class="nav-button" href="./about.html"><span class="mobile-about">About</span></a>
-                        <a class="nav-button" href="./contact.html"><span class="mobile-contact">Contact</span></a>
-                    </div>
-                </nav>
-            </header>
-
             <div class="hero">
                 <div class="hero-profile-container">    
                     <p class="hero-text">Hi, I'm Rayne Townsend, a front-end web developer and designer. I create responsive websites that are visually appealing, user-friendly, and optimized for performance.</p>
                     <img class="hero-profile-photo" src="./Resources/Images/Dithered Profile.png" alt="Profile Image">
                 </div>    
-            <a class="hero-button" href="./contact.html"><span class="hero-button-text">Contact Me</span></a>
-            <p>-- <span class="barcode">RAYNETOWNSEND</span> --</p>
+                <a class="hero-button" href="./contact.html"><span class="hero-button-text">CONTACT ME</span></a>
+                <p>-- <span class="barcode">RAYNETOWNSEND</span> --</p>
             </div>
         </div>
 
-<!-- Projects -->
+        <!-- Projects -->
+        <div class="projects-container">
+            <h2 id="projects">Projects</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    
+                    <div class="carousel-item">
+                        <p class="index">. 01</p>
+                        <div class="project-info">
+                            <h3>Website</h3>
+                            <p> A responsive website built with HTML, CSS, and JavaScript. </p>
+                        </div>
+                    </div>
 
-        <div class="carousel">
-        <button class="accordion" id="projects">
-            <p class="index">. 01</p>
-            <div class="project-info">
-                <h3>Website</h3>
-                <p> A responsive website built with HTML, CSS, and JavaScript. </p>
+                    <!--
+                    <div class="panel">
+                        <p>Designed and built a fully responsive website from scratch using HTML, CSS, and JavaScript, adapting layout, typography, and navigation across desktop, tablet, and mobile breakpoints. Implemented fluid grids, CSS media queries, and JS-driven interactions (e.g. dynamic menus, viewport-based logic) to ensure consistent usability and performance on any screen size — no frameworks required.</p>
+                        <img src="./Resources/Images/Website image.jpg" alt="Image 1">
+                    </div>
+                    -->
+
+                    <div class="carousel-item">
+                        <p class="index">. 02</p>
+                        <div class="project-info">
+                            <h3>Project 2</h3>
+                            <p> Project blurb </p>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img src="./Resources/Images/Website image.jpg" alt="Image 1">
+                    </div>
+                    -->
+                    
+                    <div class="carousel-item">
+                        <p class="index">. 03</p>
+                        <div class="project-info">
+                            <h3>Project 3</h3>
+                            <p> Project blurb </p>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <img src="./Resources/Images/Website image.jpg" alt="Image 1">
+                    </div>
+                    --> 
+
+                </div> 
+            </div>      
+        </div>
+        <!-- Skills -->
+        <banner class="skills-banner">
+            <div class="banner-track">
+                <div class="skills-1 skills">
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-git-plain"></i>
+                    <i class="devicon-github-original"></i>
+                    <i class="devicon-apex-original"></i>          
+                    <i class="devicon-bitbucket-original"></i>
+                    <i class="devicon-docker-plain"></i>
+                    <i class="devicon-json-plain"></i>
+                    <i class="devicon-linux-plain"></i>
+                    <i class="devicon-markdown-original"></i>
+                    <i class="devicon-npm-original-wordmark"></i>
+                    <i class="devicon-photoshop-plain"></i>
+                    <i class="devicon-react-original"></i>
+                    <i class="devicon-typescript-plain"></i>
+                    <i class="devicon-vscode-plain"></i>
+                </div>
+
+                <div class="skills-2 skills">
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-git-plain"></i>
+                    <i class="devicon-github-original"></i>
+                    <i class="devicon-apex-original"></i>          
+                    <i class="devicon-bitbucket-original"></i>
+                    <i class="devicon-docker-plain"></i>
+                    <i class="devicon-json-plain"></i>
+                    <i class="devicon-linux-plain"></i>
+                    <i class="devicon-markdown-original"></i>
+                    <i class="devicon-npm-original-wordmark"></i>
+                    <i class="devicon-photoshop-plain"></i>
+                    <i class="devicon-react-original"></i>
+                    <i class="devicon-typescript-plain"></i>
+                    <i class="devicon-vscode-plain"></i>
+                </div>
             </div>
-        </button>
-        <div class="panel">
-            <p>Designed and built a fully responsive website from scratch using HTML, CSS, and JavaScript, adapting layout, typography, and navigation across desktop, tablet, and mobile breakpoints. Implemented fluid grids, CSS media queries, and JS-driven interactions (e.g. dynamic menus, viewport-based logic) to ensure consistent usability and performance on any screen size — no frameworks required.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 02</p>
-            <div class="project-info">
-                <h3>Project 2</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 03</p>
-            <div class="project-info">
-                <h3>Project 3</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 04</p>
-            <div class="project-info">
-                <h3>Project 4</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 05</p>
-            <div class="project-info">
-                <h3>Project 5</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 06</p>
-            <div class="project-info">
-                <h3>Project 6</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-        <button class="accordion">
-            <p class="index">. 07</p>
-            <div class="project-info">
-                <h3>Project 7</h3>
-                <p> Project blurb </p>
-            </div>
-        </button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="./Resources/Images/Website image.jpg" alt="Image 1">
-        </div>
-
-<!-- Projects -->
-
-        <div class="skills">
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-html5-plain"></i>
-            <i class="devicon-css3-plain"></i>
-            <i class="devicon-git-plain"></i>
-            <i class="devicon-github-original"></i>
-            <i class="devicon-apex-original"></i>          
-            <i class="devicon-bitbucket-original"></i>
-            <i class="devicon-docker-plain"></i>
-            <i class="devicon-json-plain"></i>
-            <i class="devicon-linux-plain"></i>
-            <i class="devicon-markdown-original"></i>
-            <i class="devicon-npm-original-wordmark"></i>
-            <i class="devicon-photoshop-plain"></i>
-            <i class="devicon-react-original"></i>
-            <i class="devicon-typescript-plain"></i>
-            <i class="devicon-vscode-plain"></i>
-        </div>
+        </banner>
+    </main>
 
 <script src="./Resources/Scripts/main.js" defer></script>
 
