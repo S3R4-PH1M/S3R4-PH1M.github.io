@@ -56,6 +56,7 @@ h1 {
     transform-origin: bottom;
     font-family: var(--font-display);
     color: var(--fg);
+    transform-origin: center;
 }
 
 h2 {
@@ -136,7 +137,7 @@ header {
 }
 
 header h1 {
-    overflow: hidden;
+    overflow: visible;
     height: 100%;
     display: flex;
     align-items: center;
