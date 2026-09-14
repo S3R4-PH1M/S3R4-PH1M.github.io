@@ -1,0 +1,179 @@
+* {
+    font-family: Helvetica;
+
+}
+
+html {
+    background-color: #000000;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
+}
+
+body {
+    display: flex-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    scroll-snap-type: y mandatory;
+}
+
+h1 {
+    font-weight: bold;
+    font-size:clamp(2.6rem, 5.5vw, 3.5625rem);
+    margin-left: 0.3125rem;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+h2 {
+    color: #c3e28d;
+    font-size: clamp(1.95rem, 5.5vw, 3rem);
+    transform: scaleY(1.325);
+    text-align: left;
+}
+
+h3 {
+    color: #c3e28d;
+    text-align: left;
+}
+
+p {
+    color: #c3e28d;
+    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    transform: scaleY(1.125);
+    text-align: left;
+}
+
+/* Header Section */
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    z-index: 2;
+}
+
+
+header h1 {
+    flex-basis: 31.25rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav{
+    height: 100%
+}
+
+.nav-container {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    display: inline-block;
+    flex-basis: 6.25rem;
+    border-radius: 0.625rem;
+    min-width: 5.375rem;
+    margin: 0.3125rem;
+    padding: 0 0.3125rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(2.6rem, 5.5vw, 3.5625rem);
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    color: #c3e28d;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon {
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 38px;
+    height: 7px;
+    background-color: #c3e28d;
+    margin: 11px 0;
+    transition: 0.4s;
+    font-size: 3.8125rem;
+    padding-right: 0.3125rem;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 18px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -18px) rotate(45deg);
+}
+
+.mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    width: 6.9rem;
+    margin-bottom: 1.3125rem;
+    padding: 0.85rem 0.5rem;
+    background-color: #000000;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    pointer-events: none;
+    transition: max-height 0.35s ease-in-out,
+                opacity 0.25s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.mobile-nav-container.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #c3e28d;
+    transform: scaleY(2);
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    background-color: #000000;
+    padding-right: 0.3125rem;
+}
+
+.nav:hover {
+    background-color: #B8B8B8;
+}
+
+.nav:active {
+    background-color: #969696;
+}
