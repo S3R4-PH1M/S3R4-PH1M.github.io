@@ -2,43 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="./Resources/CSS/global.css" type="text/css" rel="stylesheet">
-    <link href="./Resources/CSS/index.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayne Townsend - Contact</title>
+    <meta name="description" content="Get in touch with Rayne Townsend, full-stack web developer and designer.">
+    <meta property="og:title" content="Rayne Townsend - Contact">
+    <meta property="og:description" content="Get in touch with Rayne Townsend, full-stack web developer and designer.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="./Resources/Images/Dithered Profile.png">
+    <link href="./Resources/CSS/global.css" type="text/css" rel="stylesheet">
+    <link href="./Resources/CSS/contact.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Barcode+128&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <title>Rayne Townsend - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header Section -->
-
     <header>
-        <h1>RAYNE</h1>
+        <h1><a href="./index.html">RAYNE</a></h1>
         <nav aria-label="Main navigation">
             <div class="nav-container">
                 <a class="nav-button" href="./about.html"><span class="nav-about nav">About</span></a>
-                <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="nav-project nav">Projects</span></a>
-                <a class="nav-button" href="./contact.html"><span class="nav-contact nav">Contact</span></a>
-                <div class="container icon" id="icon">
+                <a class="nav-button" href="./index.html#projects"><span class="nav-project nav">Projects</span></a>
+                <a class="nav-button" href="./contact.html"><span class="nav-contact nav" aria-current="page">Contact</span></a>
+                <div class="container icon" id="icon" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
-                </div> 
+                </div>
             </div>
-            <div class="mobile-nav-container" id="mobileNav">
+            <div class="mobile-nav-container" id="mobileNav" aria-hidden="true">
                 <a class="nav-button" href="./about.html"><span class="mobile-about">ABOUT</span></a>
                 <a class="nav-button" href="./contact.html"><span class="mobile-contact">CONTACT</span></a>
-                <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="mobile-project">PROJECTS</span></a>
+                <a class="nav-button" href="./index.html#projects"><span class="mobile-project">PROJECTS</span></a>
             </div>
         </nav>
-    </header>   
+    </header>
 
     <main>
+        <div class="page-container" data-reveal>
+            <div class="page-content">
+                <h2>Contact</h2>
+                <p>Have a project in mind, or just want to say hello? Reach out below.</p>
+
+                <div class="contact-links">
+                    <div class="contact-link">
+                        <p class="mono-tag">[ EMAIL ]</p>
+                        <a href="mailto:rayne@karma.co.nz">rayne@karma.co.nz</a>
+                    </div>
+                    <div class="contact-link">
+                        <p class="mono-tag">[ GITHUB ]</p>
+                        <a href="https://github.com/S3R4-PH1M" target="_blank" rel="noopener">github.com/S3R4-PH1M</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    
-    <script src="./Resources/Scripts/main.js" defer></script>
+
+    <footer>
+        <span class="mono-tag">© 2026 RAYNE TOWNSEND</span>
+        <a class="mono-tag" href="https://github.com/S3R4-PH1M" target="_blank" rel="noopener">GITHUB →</a>
+    </footer>
+
+<script src="./Resources/Scripts/main.js" defer></script>
+
 </body>
+</html>

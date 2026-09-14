@@ -2,43 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="./Resources/CSS/global.css" type="text/css" rel="stylesheet">
-    <link href="./Resources/CSS/index.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayne Townsend - About</title>
+    <meta name="description" content="About Rayne Townsend, a full-stack web developer and designer working across HTML, CSS, JavaScript, React, and TypeScript.">
+    <meta property="og:title" content="Rayne Townsend - About">
+    <meta property="og:description" content="Full-stack web developer and designer. Responsive, user-friendly, performance-optimised websites.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="./Resources/Images/Dithered Profile.png">
+    <link href="./Resources/CSS/global.css" type="text/css" rel="stylesheet">
+    <link href="./Resources/CSS/about.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Barcode+128&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <title>Rayne Townsend - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header Section -->
-
     <header>
-        <h1>RAYNE</h1>
+        <h1><a href="./index.html">RAYNE</a></h1>
         <nav aria-label="Main navigation">
             <div class="nav-container">
-                <a class="nav-button" href="./about.html"><span class="nav-about nav">About</span></a>
-                <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="nav-project nav">Projects</span></a>
+                <a class="nav-button" href="./about.html"><span class="nav-about nav" aria-current="page">About</span></a>
+                <a class="nav-button" href="./index.html#projects"><span class="nav-project nav">Projects</span></a>
                 <a class="nav-button" href="./contact.html"><span class="nav-contact nav">Contact</span></a>
-                <div class="container icon" id="icon">
+                <div class="container icon" id="icon" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
-                </div> 
+                </div>
             </div>
-            <div class="mobile-nav-container" id="mobileNav">
+            <div class="mobile-nav-container" id="mobileNav" aria-hidden="true">
                 <a class="nav-button" href="./about.html"><span class="mobile-about">ABOUT</span></a>
                 <a class="nav-button" href="./contact.html"><span class="mobile-contact">CONTACT</span></a>
-                <a class="nav-button" href="#projects" onClick="document.getElementById('projects').scrollIntoView();"><span class="mobile-project">PROJECTS</span></a>
+                <a class="nav-button" href="./index.html#projects"><span class="mobile-project">PROJECTS</span></a>
             </div>
         </nav>
-    </header>   
+    </header>
 
     <main>
+        <div class="page-container" data-reveal>
+            <div class="page-content">
+                <h2>About</h2>
+                <p class="page-lede">I'm Rayne Townsend, a full-stack web developer and designer. I build responsive, user-friendly websites, from first wireframe through to shipped code, optimised for performance along the way.</p>
+
+                <div class="stack-list">
+                    <p class="mono-tag">[ TOOLS &amp; LANGUAGES ]</p>
+                    <div class="stack-tags">
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>npm</span>
+                    </div>
+                </div>
+
+                <div class="page-cta-row">
+                    <a href="./contact.html">GET IN TOUCH →</a>
+                    <a href="https://github.com/S3R4-PH1M" target="_blank" rel="noopener">GITHUB →</a>
+                </div>
+            </div>
+        </div>
     </main>
-    
-    <script src="./Resources/Scripts/main.js" defer></script>
+
+    <footer>
+        <span class="mono-tag">© 2026 RAYNE TOWNSEND</span>
+        <a class="mono-tag" href="https://github.com/S3R4-PH1M" target="_blank" rel="noopener">GITHUB →</a>
+    </footer>
+
+<script src="./Resources/Scripts/main.js" defer></script>
+
 </body>
+</html>

@@ -1,18 +1,3 @@
-var accordions = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < accordions.length; i++) {
-  accordions[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-
 var icon = document.getElementById("icon");
 var mobileNav = document.getElementById("mobileNav");
 
@@ -43,6 +28,14 @@ function toggleMobileNav() {
 
 icon.addEventListener("click", toggleMobileNav);
 
+// Icon is a focusable div (role="button"), so it needs explicit key handling
+icon.addEventListener("keydown", function(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    toggleMobileNav();
+  }
+});
+
 // Close after choosing a link, so the menu doesn't stay open post-navigation
 mobileNav.querySelectorAll(".nav-button").forEach(function(link) {
   link.addEventListener("click", closeMobileNav);
@@ -63,3 +56,27 @@ document.addEventListener("keydown", function(event) {
     icon.focus();
   }
 });
+
+// Reveal each major section once as it scrolls into view (hierarchy / sequence cue).
+// Skipped entirely under reduced-motion: sections are visible by default via CSS.
+var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var revealTargets = document.querySelectorAll("[data-reveal]");
+
+if (!prefersReducedMotion && "IntersectionObserver" in window && revealTargets.length) {
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealTargets.forEach(function(target) {
+    revealObserver.observe(target);
+  });
+} else {
+  revealTargets.forEach(function(target) {
+    target.classList.add("is-visible");
+  });
+}

@@ -1,104 +1,52 @@
-* {
-    font-family: Helvetica;
-    background-color: #000000;
-}
-
-div.container {
-    border: 1px solid #D6D6D6;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
-}
-
-h1 {
-    font-weight: bold;
-    font-size: 57px;
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 18px;
-}
-
-/* Header Section */
-
-header {
-    display: inline-flex;
-    justify-content: space-between;
+.page-container {
+    min-height: calc(100dvh - var(--nav-height));
+    display: flex;
     align-items: center;
+    padding: 3rem 1.25rem 4rem;
+}
+
+.page-content {
     width: 100%;
-    height: 171px;
+    max-width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-header h1 {
-    flex-basis: 500px;
-
+.page-content h2 {
+    font-family: var(--font-display);
 }
 
-.nav-container {
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
 }
 
-.nav-project {
-    flex-basis: 100px;
-    border-radius: 10px;
-    min-width: 150px;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 57px;
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
-.nav-about {
-    flex-basis: 100px;
-    border-radius: 10px;
-    min-width: 150px;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 57px;
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
+.contact-link .mono-tag {
+    font-size: 0.7rem;
 }
 
-.nav-contact {
-    flex-basis: 100px;
-    border-radius: 10px;
-    min-width: 150px;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 57px;
-    transform: scaleY(2);
-    font-family: "Bebas Neue";
-    color: #c3e28d;
-}
-
-.nav-button {
+.contact-link a {
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
     text-decoration: none;
-    color: black
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+    width: fit-content;
 }
 
-.nav:hover {
-    background-color: #B8B8B8;
+.contact-link a:hover,
+.contact-link a:focus-visible {
+    border-color: var(--fg);
 }
-
-.nav:active {
-    background-color: #969696;
-}
-
-
-/* Project Section */

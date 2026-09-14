@@ -1,75 +1,109 @@
-/* Hero Section */
+/* ===== Hero ===== */
 
 .hero-container {
-
-    height: 85vh;
+    min-height: calc(100dvh - var(--nav-height));
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-margin-top: var(--nav-height);
+    padding: 1.25rem;
 }
 
 .hero {
     width: 100%;
-    height: 85vh;
+    max-width: 56rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    text-align: center;
 }
 
 .hero-profile-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .hero-text-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+}
+
+.hero-heading {
+    font-size: clamp(2.25rem, 6vw, 3.75rem);
+    line-height: 0.95;
+}
+
+.hero-text {
+    max-width: 42rem;
 }
 
 .hero-profile-photo {
-    width: min(31rem, 90vw);
+    width: min(11rem, 45vw);
     height: auto;
-    margin-top: 0.225rem;
-    margin-right: 0.525rem;
-    border-radius: 0.25rem;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    border: 1px solid var(--line-strong);
 }
-
 
 .hero-button {
     text-decoration: none;
-    color: #c3e28d;
-    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
-    text-align: left;
+    color: var(--bg);
+    background-color: var(--fg);
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
     font-weight: bold;
-    font-family: "Bebas Neue";
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    padding: 0.65rem 2rem;
+    display: inline-block;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.hero-button:hover {
+    opacity: 0.85;
+}
+
+.hero-button:active {
+    transform: translateY(1px);
 }
 
 .barcode {
     font-family: "Libre Barcode 128";
-    font-size: 3.5625rem;
-    transform: scaleY(2);
-    color: #c3e28d;
+    font-size: 2.25rem;
+    transform: scaleY(1.3);
+    color: var(--fg-dim);
 }
 
-/* Project Carousel */
+/* ===== Projects ===== */
 
 .projects-container {
-    width: 100%;
-    height: 100vh;
+    min-height: calc(100dvh - var(--nav-height));
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    scroll-snap-type: y mandatory;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 1.25rem;
+    border-top: 1px solid var(--line);
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    scroll-margin-top: var(--nav-height);
+}
+
+.projects-container h2 {
+    max-width: 56rem;
+    margin: 0 auto;
+    width: 100%;
+    font-family: var(--font-display);
 }
 
 .carousel-wrapper {
-    width: 99vw;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .carousel {
@@ -78,84 +112,77 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    flex: 0 0 auto;
     gap: 1.25rem;
-    align-items: center;
-    padding: 1rem 0.25rem;
-    width: 95vw;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding: 0.5rem 0.25rem 1rem;
+    width: 100%;
+    max-width: 56rem;
+    scrollbar-width: none;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+    display: none;
 }
 
 .carousel-item {
     display: flex;
     flex-direction: column;
-    flex: 0 0 95vw;
-    height:100%;
+    gap: 0.75rem;
+    flex: 0 0 min(26rem, 88vw);
+    padding: 1.5rem;
     scroll-snap-align: start;
-    border-radius: 8px;
-    margin: 0.25rem;
-    border: 1px solid #c3e28d;
+    border: 1px solid var(--line-strong);
 }
 
-img {
-    height: 60%;
-    aspect-ratio: 1/1;
-}
-
-.panel p {
-    color: #c3e28d;
-    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
-    text-align: left;
-    font-family: "Bebas Neue";
-}
-
-.projects-container h2 {
-    color: #c3e28d;
-    font-size: clamp(1.95rem, 5.5vw, 3rem);
-    text-align: left;
-    font-family: "Bebas Neue";
-}
-
-h3 {
-    color: #c3e28d;
-    font-size: clamp(1.95rem, 5.5vw, 3rem);
-    text-align: left;
-    font-family: "Bebas Neue";
-}
-
-.index {
-    color: #c3e28d;
-    font-size: clamp(1.95rem, 5vw, 3rem);
-    text-align: left;
-    font-family: "Bebas Neue";
-}
-
-.project-info {
-    width: 31.25rem;
-}
-
-.skills {
-    display: flex;
+.carousel-item.is-placeholder {
     justify-content: center;
-    overflow-x: auto;
-    align-items: center;
-    gap: 1.25rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    color: #c3e28d;
-    font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+    align-items: flex-start;
+    border-style: dashed;
 }
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border: 1px solid var(--line);
+}
+
+.project-index {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--fg-dim);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.project-tags .mono-tag {
+    border: 1px solid var(--line);
+    padding: 0.2rem 0.5rem;
+}
+
+.project-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+/* ===== Skills marquee ===== */
 
 .skills-banner {
     overflow: hidden;
     width: 100%;
-    background-color: #000000;
+    background-color: var(--bg);
+    border-top: 1px solid var(--line);
     padding: 20px 0;
     display: flex;
 }
@@ -166,12 +193,14 @@ h3 {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-track {
+        animation: none;
+    }
 }
 
 .skills {
@@ -179,68 +208,24 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    color: #c3e28d;
+    padding: 0.625rem;
+    color: var(--fg);
     font-size: clamp(1.25rem, 4.5vw, 2.25rem);
 }
 
-/* Mobile Styles */
+/* ===== Mobile ===== */
 
 @media screen and (max-width: 800px) {
-
-   .project-info {
-        width: 60%
+    .hero-container,
+    .projects-container {
+        min-height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
-
-    header {
-        height: 7rem;
-    }
-}
-
-@media screen and (max-width: 700px) {
-
-    .accordion {
-        padding: 0.5rem;
-        height: 12.625rem;
-        display: flex;
-        text-align: left;
-        font-size: 2rem;
-        transition: 0.8s;
-        background-color: #000000;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .nav-about {
-        display: none;
-    }
-
-    .nav-project {
-        display: none;
-    }
-
-    .nav-about {
-        display: none;
-    }
-
-    .nav-contact {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 400px) {
-
-    .project-info {
-        width: 60%;
-    }
-
-    h3 {
-        padding-bottom: 1px;
-        margin-bottom: 8px;
+    .hero-heading {
+        font-size: clamp(2.1rem, 9vw, 2.75rem);
     }
 }
-
-
