@@ -190,11 +190,12 @@
 .banner-track {
     display: flex;
     animation: scroll 25s linear infinite;
+    width: max-content;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(calc(-1 * var(--skill-copy-width, 860px))); }
 }
 
 @media (prefers-reduced-motion: reduce) {
