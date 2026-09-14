@@ -80,3 +80,18 @@ if (!prefersReducedMotion && "IntersectionObserver" in window && revealTargets.l
     target.classList.add("is-visible");
   });
 }
+
+var track = document.querySelector(".banner-track");
+var banner = document.querySelector(".skills-banner");
+
+if (track && banner) {
+  var original = track.querySelector(".skills-1");
+  var originalWidth = original.getBoundingClientRect().width;
+
+  while (track.scrollWidth < banner.getBoundingClientRect().width * 2 + originalWidth) {
+    var clone = original.cloneNode(true);
+    clone.classList.remove("skills-1");
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+  }
+}
